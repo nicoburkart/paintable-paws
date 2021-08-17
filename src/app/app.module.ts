@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 
 import { HomeModule } from './modules/home/home.module';
 import { HomePageComponent } from './modules/home/home-page/home-page.component';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [AppComponent, HomePageComponent],
-  imports: [BrowserModule, AppRoutingModule, HomeModule],
+  imports: [BrowserModule, AppRoutingModule, HomeModule, CoreModule],
   providers: [],
   bootstrap: [AppComponent],
 })
