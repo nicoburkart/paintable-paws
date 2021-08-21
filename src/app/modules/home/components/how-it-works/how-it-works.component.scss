@@ -1,0 +1,55 @@
+@import "abstracts/variables";
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.step {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem;
+
+  img {
+    width: 100%;
+  }
+}
+
+.section-header {
+  margin-bottom: 3rem;
+}
+
+#step-one {
+  img {
+    transform: translateY(-50px);
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: $sd) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: $md) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: $ld) {
+  .step {
+    max-width: 400px;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: $eld) {
+  .step {
+    margin: 3rem;
+  }
+}

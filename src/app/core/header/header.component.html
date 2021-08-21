@@ -1,1 +1,22 @@
-<p>header works!</p>
+<nav class="container">
+  <button class="menu-btn" (click)="expandMenu()">
+    <img src="assets/icons/burger-menu.svg" alt="burger menu" />
+  </button>
+  <a class="logo">PaintablePaws.</a>
+  <div
+    class="expandables animate__animated animate__fadeInLeft"
+    [class.expanded]="menuExpanded"
+  >
+    <button class="close-btn" (click)="expandMenu()">
+      <img src="assets/icons/close.svg" alt="burger menu" />
+    </button>
+    <a class="nav-el">Home</a>
+    <a class="nav-el">Art-Styles</a>
+    <a class="nav-el">Your Artworks</a>
+    <a class="nav-el">About</a>
+  </div>
+  <button class="bag-btn">
+    <img src="assets/icons/bag.svg" alt="shopping bag" />
+    <div class="bag-items"><p>3</p></div>
+  </button>
+</nav>
