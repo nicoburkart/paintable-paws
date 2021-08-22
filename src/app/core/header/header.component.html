@@ -2,7 +2,7 @@
   <button class="menu-btn" (click)="expandMenu()">
     <img src="assets/icons/burger-menu.svg" alt="burger menu" />
   </button>
-  <a class="logo">PaintablePaws.</a>
+  <a routerLink="" class="logo">PaintablePaws.</a>
   <div
     class="expandables animate__animated animate__fadeInLeft"
     [class.expanded]="menuExpanded"
@@ -10,8 +10,8 @@
     <button class="close-btn" (click)="expandMenu()">
       <img src="assets/icons/close.svg" alt="burger menu" />
     </button>
-    <a class="nav-el">Home</a>
-    <a class="nav-el">Art-Styles</a>
+    <a routerLink="" class="nav-el">Home</a>
+    <a routerLink="/order" class="nav-el">Art-Styles</a>
     <a class="nav-el">Your Artworks</a>
     <a class="nav-el">About</a>
   </div>

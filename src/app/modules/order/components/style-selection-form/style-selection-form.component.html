@@ -1,0 +1,95 @@
+<form [formGroup]="order" class="form-view">
+  <div class="form-section">
+    <div class="selected-style">
+      <h2 class="section-header">Abstract-Style</h2>
+      <button class="style-selection-btn">
+        <img src="/assets/icons/arrow-down.svg" alt="arrow pointing down" />
+      </button>
+    </div>
+
+    <h3 class="sub-section-header">
+      From 59.99 € <span class="original-price">79.99 €</span>
+      <button class="info-btn">pay later</button>
+    </h3>
+  </div>
+  <div class="form-section">
+    <h3 class="sub-sub-section-header">
+      Upload your pet picture<button class="info-btn">photo guide</button>
+    </h3>
+    <p class="section-description">We'll focus on head and chest region.</p>
+    <div *ngIf="uploadedImage" class="uploaded-image">
+      <img [src]="uploadedImage" alt="your uploaded image" />
+    </div>
+
+    <div class="form-group">
+      <button class="primary-btn upload-btn">
+        {{ uploadedImage ? "Uploaded!" : "Upload Image" }}
+      </button>
+      <input
+        type="file"
+        accept="image/png, image/jpeg"
+        (change)="displayImage($event)"
+        formControlName="imageFile"
+        required
+      />
+    </div>
+  </div>
+  <div class="form-section">
+    <h3 class="sub-sub-section-header">Choose canvas size</h3>
+    <p class="section-description">
+      You can change this when you order the artwork.
+    </p>
+    <div class="radio-group">
+      <label class="radio-wrapper">
+        <input
+          type="radio"
+          checked="checked"
+          name="canvasSize"
+          value="8x10"
+          formControlName="canvasSize"
+        />
+        <span class="check-indicator">8 x 10cm</span>
+      </label>
+      <label class="radio-wrapper">
+        <input
+          type="radio"
+          name="canvasSize"
+          formControlName="canvasSize"
+          value="20x15"
+        />
+        <span class="check-indicator">20 x 15cm</span>
+      </label>
+    </div>
+  </div>
+  <div class="form-section">
+    <h2 class="sub-sub-section-header">How can we contact you?</h2>
+    <p class="section-description">
+      We will notify you once the artwork is finished.
+    </p>
+    <div class="email-info-box">
+      <div class="info-wrapper">
+        <img src="/assets/icons/clock.svg" alt="" />
+        <p>Your artwork will be finished within 24 h.</p>
+      </div>
+      <div class="info-wrapper">
+        <img src="/assets/icons/mail.svg" alt="" />
+        <p>You will be notified via email.</p>
+      </div>
+      <div class="info-wrapper">
+        <img src="/assets/icons/check.svg" alt="" />
+        <p>Approve and order your artwork.</p>
+      </div>
+      <div class="form-group">
+        <label for="email">Your email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          formControlName="email"
+          required
+        />
+      </div>
+      <button type="submit" class="primary-btn">Create My Artwork</button>
+    </div>
+  </div>
+</form>

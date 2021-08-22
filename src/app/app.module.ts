@@ -9,6 +9,7 @@ import { HomePageComponent } from './modules/home/home-page/home-page.component'
 import { CoreModule } from './core/core.module';
 import { OrderPageComponent } from './modules/order/order-page/order-page.component';
 import { OrderModule } from './modules/order/order.module';
+import { SwiperModule } from 'swiper/angular';
 
 @NgModule({
   declarations: [AppComponent, HomePageComponent, OrderPageComponent],
@@ -18,6 +19,7 @@ import { OrderModule } from './modules/order/order.module';
     CoreModule,
     HomeModule,
     OrderModule,
+    SwiperModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

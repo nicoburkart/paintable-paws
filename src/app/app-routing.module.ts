@@ -6,6 +6,10 @@ import { OrderPageComponent } from './modules/order/order-page/order-page.compon
 const routes: Routes = [
   {
     path: '',
+    component: HomePageComponent,
+  },
+  {
+    path: 'order',
     component: OrderPageComponent,
   },
 ];

@@ -1,7 +1,8 @@
 @import "abstracts/variables";
 
 nav {
-  background: url("/assets/images/header-background-mobile.svg") no-repeat;
+  background: linear-gradient(rgba(91, 162, 218, 0.3), rgba(91, 162, 218, 0.3)),
+    url("/assets/images/header-background-mobile.svg") no-repeat;
   background-size: cover;
   backdrop-filter: blur(15px);
   color: $font-color-light;
@@ -167,7 +168,11 @@ button {
   nav {
     left: 50%;
     transform: translateX(-50%);
-    background: url("/assets/images/header-background-desktop.svg") no-repeat;
+    background: linear-gradient(
+        rgba(91, 162, 218, 0.3),
+        rgba(91, 162, 218, 0.3)
+      ),
+      url("/assets/images/header-background-desktop.svg") no-repeat;
     background-size: cover;
   }
 }
