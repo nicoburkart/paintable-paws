@@ -1,0 +1,29 @@
+@import "abstracts/variables";
+
+.modal {
+  padding: 0;
+  position: relative;
+
+  .close-btn {
+    top: 1.2rem;
+    right: 1rem;
+  }
+}
+
+.style {
+  display: flex;
+  align-items: center;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-top: 1px solid $font-color-light;
+  img {
+    height: 8rem;
+    border-radius: 22px;
+    margin-left: 1rem;
+  }
+  h3.sub-section-header {
+    text-align: left;
+    margin: unset;
+    margin-left: 1rem;
+  }
+}

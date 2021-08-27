@@ -49,6 +49,14 @@
   }
 }
 
+.close-btn {
+  height: 50px;
+  position: absolute;
+  padding: 5px;
+  top: 10px;
+  right: 10px;
+}
+
 // Large devices (desktops, 992px and up)
 @media (min-width: $ld) {
   .primary-btn {
