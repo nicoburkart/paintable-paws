@@ -11,23 +11,17 @@ export class HeaderComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    // document.getElementById('main').onscroll = (event) => {
-    //   this.scrollFunction(event.target as HTMLElement);
-    // };
+    
+  }
+  //extra closing methode for mobile devices - triggered on expandable navigation event
+  closeMenu() {
+    if(this.menuExpanded) {
+      this.menuExpanded = false;
+    }
   }
 
-  expandMenu() {
+  toggleMenu() {
     this.menuExpanded = !this.menuExpanded;
-    console.log(this.menuExpanded);
   }
-
-  // scrollFunction(mainEl: HTMLElement) {
-  //   if (mainEl.scrollTop > 80 || mainEl.scrollTop > 80) {
-  //     document.getElementById('#navbar').classList.remove('transparent');
-  //     console.log('not transparent');
-  //   } else {
-  //     document.getElementById('#navbar').classList.add('transparent');
-  //     console.log('transparent');
-  //   }
-  // }
+  
 }

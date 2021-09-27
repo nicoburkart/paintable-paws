@@ -1,5 +1,9 @@
 @import "abstracts/variables";
 
+.hide {
+  display: none !important;
+}
+
 .modal-overlay {
   width: 100vw;
   height: 100vh;

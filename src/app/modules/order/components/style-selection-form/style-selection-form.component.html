@@ -1,8 +1,8 @@
 <form [formGroup]="order" class="form-view">
   <div class="form-section">
     <div class="selected-style">
-      <h2 class="section-header">Abstract-Style</h2>
-      <button class="style-selection-btn">
+      <h2 class="section-header">{{artStyle.name | titlecase}} Style</h2>
+      <button class="style-selection-btn" (click)="openModal()">
         <img src="/assets/icons/arrow-down.svg" alt="arrow pointing down" />
       </button>
     </div>
@@ -92,5 +92,6 @@
       <button type="submit" class="primary-btn">Create My Artwork</button>
     </div>
   </div>
+  <p>{{order.value | json}}</p>
 </form>
-<order-style-selection-modal></order-style-selection-modal>
+<order-style-selection-modal *ngIf="modalVisible" [selectedId]=artStyle.id (onCloseEvent)="handleModal($event)"></order-style-selection-modal>
