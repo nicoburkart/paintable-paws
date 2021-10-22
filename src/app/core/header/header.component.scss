@@ -1,0 +1,179 @@
+@import "abstracts/variables";
+
+nav {
+  background: linear-gradient(rgba(91, 162, 218, 0.3), rgba(91, 162, 218, 0.3)),
+    url("/assets/images/header-background-mobile.svg") no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(15px);
+  color: $font-color-light;
+  display: flex;
+  align-items: center;
+  height: $nav-height;
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  transition: 0.2s;
+}
+
+nav.transparent {
+  background: transparent;
+  backdrop-filter: unset;
+}
+
+button {
+  height: 100%;
+
+  &.close-btn {
+    height: unset;
+    top:30px;
+    left: 30px;
+  }
+
+  &.menu-btn {
+    padding: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    float: left;
+  }
+
+  &.bag-btn {
+    padding: 15px;
+    padding-right: 0;
+    padding-left: 0;
+    margin-left: auto;
+    position: relative;
+    .bag-items {
+      position: absolute;
+      display: flex;
+      background-color: $primary-color;
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      right: -10px;
+      bottom: 5px;
+      p {
+        color: $font-color-light;
+        line-height: 25px;
+        text-align: center;
+        margin: auto;
+      }
+    }
+  }
+
+  img {
+    height: 100%;
+  }
+}
+
+.logo {
+  font-family: $ff_bold;
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.expandables {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: $secondary-color;
+  a {
+    font-family: $ff_medium;
+    margin-top: 1.5rem;
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    cursor: pointer;
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 0%;
+      content: ".";
+      color: transparent;
+      background: $font-color-light;
+      height: 2px;
+      transition: all 0.5s;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+.expanded {
+  display: flex;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: $sd) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: $md) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: $ld) {
+  nav {
+    justify-content: unset;
+    .menu-btn {
+      display: none;
+    }
+    .bag-btn {
+    }
+  }
+
+  .logo {
+    text-align: left;
+    width: unset;
+  }
+
+  .expandables {
+    display: flex;
+    position: unset;
+    background-color: unset;
+    flex-direction: row;
+    height: unset;
+    width: unset;
+    .close-btn {
+      display: none;
+    }
+    a {
+      margin: unset;
+      margin-left: 20px;
+      margin-right: 20px;
+      &:first-of-type {
+        margin-left: 40px;
+      }
+      &:last-of-type {
+        margin-right: 40px;
+      }
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: $eld) {
+  nav {
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(
+        rgba(91, 162, 218, 0.3),
+        rgba(91, 162, 218, 0.3)
+      ),
+      url("/assets/images/header-background-desktop.svg") no-repeat;
+    background-size: cover;
+  }
+}

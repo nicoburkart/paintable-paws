@@ -1,0 +1,77 @@
+@import "abstracts/variables";
+
+.btn {
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  border-radius: 16px;
+  min-width: 18rem;
+  cursor: pointer;
+}
+
+.btn-border-padding {
+  @extend .btn;
+  padding-top: calc(1rem - 2px);
+  padding-bottom: calc(1rem - 2px);
+}
+
+.primary-btn {
+  @extend .btn;
+  background-color: $primary-color;
+  color: $font-color-light;
+  &:hover {
+    background-color: $primary-color;
+  }
+}
+
+.secondary-btn {
+  @extend .btn-border-padding;
+  border: 2px solid $primary-color;
+  color: $font-color-dark;
+  &:hover {
+    border: 2px solid $primary-color;
+  }
+}
+
+.info-btn {
+  color: #2870c9;
+  font-family: $ff_light;
+  cursor: pointer;
+  &::after {
+    display: block;
+    float: right;
+    content: "";
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-left: 0.3rem;
+    background: url("/assets/icons/info.svg") no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+  }
+}
+
+.close-btn {
+  cursor: pointer;
+  position: absolute;
+  height: 60px;
+  padding: 5px;
+  top: 20px;
+  right: 10px;
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: $ld) {
+  .primary-btn {
+    &:hover {
+      transition: ease-in-out 0.2s;
+      background-color: $hover-color;
+    }
+  }
+
+  .secondary-btn {
+    &:hover {
+      transition: ease-in-out 0.2s;
+      color: $font-color-light;
+      background-color: $primary-color;
+    }
+  }
+}

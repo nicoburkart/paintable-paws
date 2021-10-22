@@ -1,0 +1,30 @@
+//general colors
+$primary-color: #000746;
+$secondary-color: #5ba2da;
+$tertiary-color: #9dbfc5;
+
+$hover-color: #000c75;
+
+//typography colors
+$font-color-dark: $primary-color;
+$font-color-light: white;
+
+//typography
+
+$ff_bold: m-bold;
+$ff_s_bold: m-semi-bold;
+$ff_medium: m-med;
+$ff_reg: m-reg;
+$ff_light: m-light;
+
+$fs_xl: clamp(3.5rem, 8vw, 8rem);
+
+//breakpoints
+
+$sd: "576px";
+$md: "768px";
+$ld: "992px";
+$eld: "1223px";
+
+//other
+$nav-height: 65px;

@@ -1,0 +1,32 @@
+@import "abstracts/variables";
+
+.hide {
+  display: none !important;
+}
+
+.modal-overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  background-color: rgba(91, 162, 218, 0.2);
+  backdrop-filter: blur(3px);
+  z-index: 100;
+
+  .modal {
+    background-color: $secondary-color;
+    border-radius: 22px;
+    padding: 1rem;
+    width: 100%;
+    max-width: 600px;
+
+    .section-header,
+    .sub-section-header {
+      color: $font-color-light;
+    }
+  }
+}

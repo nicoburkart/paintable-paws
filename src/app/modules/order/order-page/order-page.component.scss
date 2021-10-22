@@ -1,0 +1,33 @@
+@import "abstracts/variables";
+
+.container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding-top: $nav-height;
+  width: 100%;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: $sd) {
+  .container {
+    margin-top: 2rem;
+    gap: 3rem;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: $ld) {
+  .container {
+    margin-top: 3rem;
+    gap: 4rem;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: $eld) {
+}

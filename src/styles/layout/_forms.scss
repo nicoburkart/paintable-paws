@@ -1,0 +1,80 @@
+@import "abstracts/variables";
+@import "components/buttons";
+
+//simple form-field
+.form-group {
+  position: relative;
+  label {
+    font-size: 0.9rem;
+  }
+  input {
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 8px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-sizing: border-box;
+    font-size: 1rem;
+  }
+
+  input[type="file"] {
+    opacity: 0;
+    left: 0;
+    top: 0;
+    margin-top: 0;
+    background-color: violet;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+  }
+}
+
+//radio-button
+.radio-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+  row-gap: 1rem;
+  column-gap: 3rem;
+  .radio-wrapper {
+    .check-indicator {
+      @extend .secondary-btn;
+      font-family: $ff_bold;
+      box-sizing: border-box;
+      display: block;
+      position: relative;
+      padding: 2rem;
+      border: 2px solid $tertiary-color;
+      text-align: center;
+      min-width: unset;
+      .check-indicator:hover {
+        background-color: transparent;
+      }
+    }
+    input:checked ~ .check-indicator {
+      border: 2px solid $primary-color;
+    }
+    input {
+      position: absolute;
+      opacity: 0;
+    }
+  }
+}
+
+@media (min-width: $sd) {
+  .radio-group .radio-wrapper .check-indicator {
+    padding: 3rem;
+  }
+}
+
+@media (min-width: $ld) {
+  .check-indicator {
+    &:hover {
+      transition: ease-in-out 0.2s;
+      border: 2px solid $primary-color;
+      color: $primary-color !important;
+      background-color: transparent !important;
+    }
+  }
+}

@@ -1,0 +1,112 @@
+@import "abstracts/variables";
+
+.container {
+  background-image: url("/assets/images/hero-background-mobile.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-position-x: left;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding-top: $nav-height;
+  color: $font-color-light;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  h1 {
+    font-size: 10vw;
+    //font-size: $fs_xl !important;
+    margin-bottom: 1.5rem;
+    line-height: 14vw;
+    text-align: center;
+  }
+
+  p {
+    font-family: $ff_reg;
+    font-size: 5vw;
+    letter-spacing: 5px;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.hero-image {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-height: 50%;
+  object-fit: contain;
+  -webkit-filter: drop-shadow(15px 15px 40px #0044ff7d);
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: $sd) {
+  .hero-text {
+    h1 {
+      font-size: 3.5rem;
+      line-height: 4.9rem;
+    }
+    p {
+      font-size: 1.75rem;
+    }
+  }
+
+  .hero-image {
+    width: unset;
+    max-width: 100%;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: $md) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: $ld) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: $eld) {
+  .container {
+    background-image: url("/assets/images/hero-background-desktop.svg");
+    background-position-x: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-image {
+    width: 50%;
+    width: 50%;
+    max-height: 90%;
+    margin-right: auto;
+    margin-bottom: 5%;
+  }
+
+  .hero-text {
+    margin-bottom: 10%;
+    h1 {
+      font-size: 5vw;
+      line-height: 7vw;
+      text-align: left;
+    }
+    p {
+      font-size: 2.5vw;
+      text-align: left;
+    }
+    button {
+      margin-left: unset;
+    }
+  }
+}

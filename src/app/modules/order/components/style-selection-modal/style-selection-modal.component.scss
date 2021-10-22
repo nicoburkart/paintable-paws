@@ -1,0 +1,44 @@
+@import "abstracts/variables";
+
+.modal {
+  padding: 0;
+  position: relative;
+
+  .close-btn {
+    top: 1.2rem;
+    right: 1rem;
+  }
+}
+
+.style {
+  display: flex;
+  align-items: center;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-top: 1px solid $font-color-light;
+  cursor: pointer;
+  img {
+    height: 8rem;
+    border-radius: 22px;
+    margin-left: 1rem;
+  }
+  h3.sub-section-header {
+    text-align: left;
+    margin: unset;
+    margin-left: 1rem;
+    position: relative;
+  }
+}
+
+.selected::after {
+  content: "";
+  background-image: url("/assets/icons/check.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 25px;
+  width: 34px;
+  position: absolute;
+  right: calc(1rem + 5px);
+  top: -2px;
+}

@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyDyeHpY371JByX2fX3_tFCVKNuJmjy8YOY",
+  authDomain: "paintable-paws.firebaseapp.com",
+  projectId: "paintable-paws",
+  storageBucket: "paintable-paws.appspot.com",
+  messagingSenderId: "161092030297",
+  appId: "1:161092030297:web:47a51c6f74b2c71561c648",
+  measurementId: "G-9P4T6YSGHX"
+  }
 };
 
 /*
@@ -13,4 +22,4 @@ export const environment = {
  * This import should be commented out in production mode because it will have a negative impact
  * on performance if an error is thrown.
  */
-// import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+// import 'zone.js/plugins/zone-error';  // Included with Angular CLI.

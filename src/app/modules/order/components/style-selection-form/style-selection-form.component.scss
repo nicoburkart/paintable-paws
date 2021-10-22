@@ -1,0 +1,118 @@
+@import "abstracts/variables";
+
+:host {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+}
+
+.form-view {
+  width: 100%;
+
+  .form-section {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid $tertiary-color;
+
+    &:last-of-type {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .section-description {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .info-btn {
+    float: right;
+  }
+
+  .section-header {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    width: unset;
+  }
+
+  .section-header,
+  .sub-section-header,
+  .sub-sub-section-header {
+    text-align: left;
+  }
+
+  .sub-section-header {
+    .original-price {
+      font-family: $ff-light;
+      text-decoration: line-through;
+      margin-left: 1rem;
+    }
+  }
+
+  .upload-btn {
+    width: 100%;
+  }
+
+  .uploaded-image {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1.5rem;
+
+    img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      object-position: center;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 50%;
+    }
+  }
+
+  .email-info-box {
+    background-color: $secondary-color;
+    border-radius: 40px;
+    padding: 1.5rem;
+    .info-wrapper {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 0.5rem;
+      }
+      p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        color: $font-color-light;
+        line-height: 1.2rem;
+      }
+    }
+
+    .form-group {
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      label {
+        color: $font-color-light;
+      }
+      input {
+        border: none;
+      }
+    }
+
+    .primary-btn {
+      width: 100%;
+    }
+  }
+}
+
+.selected-style {
+  display: flex;
+  .style-selection-btn {
+    background-color: $primary-color;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,42 @@
+@import "abstracts/variables";
+
+.swiper-pagination {
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: $primary-color;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50%;
+
+  &::after {
+    content: "" !important;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.swiper-button-next::after {
+  background: url("/assets/icons/arrow-right.svg") no-repeat center;
+}
+.swiper-button-prev::after {
+  background: url("/assets/icons/arrow-left.svg") no-repeat center;
+}
+
+.swiper-pagination-bullets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-pagination-bullet {
+  width: 0.6rem !important;
+  height: 0.6rem !important;
+  background-color: $primary-color !important;
+}
+
+.swiper-pagination-bullet-active {
+  width: 0.8rem !important;
+  height: 0.8rem !important;
+}

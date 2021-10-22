@@ -1,0 +1,112 @@
+@import "abstracts/variables";
+
+@font-face {
+  font-family: "m-extra-light";
+  src: url("/assets/fonts/Montserrat-ExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "m-light";
+  src: url("/assets/fonts/Montserrat-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "m-light-it";
+  src: url("/assets/fonts/Montserrat-LightItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "m-reg";
+  src: url("/assets/fonts/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "m-med";
+  src: url("/assets/fonts/Montserrat-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "m-semi-bold";
+  src: url("/assets/fonts/Montserrat-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "m-bold";
+  src: url("/assets/fonts/Montserrat-Bold.ttf") format("truetype");
+}
+
+html {
+  color: $font-color-dark;
+}
+
+body,
+input,
+select,
+textarea {
+  font-family: $ff_medium;
+}
+
+h1,
+h2,
+button {
+  font-family: $ff_bold;
+}
+
+h3,
+h4 {
+  font-family: $ff_s_bold;
+}
+
+a,
+p,
+label {
+  font-family: $ff_light;
+}
+
+//font-sizes
+
+button {
+  font-size: 1rem;
+}
+
+.section-header {
+  font-family: $ff_bold;
+  font-size: 1.8rem;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.sub-section-header {
+  font-family: $ff_s_bold;
+  font-size: 1.2rem;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+.sub-sub-section-header {
+  @extend .sub-section-header;
+  font-size: 1rem;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: $sd) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: $md) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: $ld) {
+  html {
+    font-size: 120%;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: $eld) {
+}

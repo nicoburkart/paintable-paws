@@ -1,0 +1,21 @@
+// Small devices (landscape phones, 576px and up)
+@media (min-width: $sd) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: $md) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: $ld) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: $eld) {
+}
+
+.placeholder {
+  height: 300px;
+  width: 300px;
+  background-color: gray;
+}

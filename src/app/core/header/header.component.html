@@ -1,0 +1,22 @@
+<nav class="container">
+  <button class="menu-btn" (click)="toggleMenu()">
+    <img src="assets/icons/burger-menu.svg" alt="burger menu" />
+  </button>
+  <a routerLink="" class="logo">PaintablePaws.</a>
+  <div
+    class="expandables animate__animated animate__fadeInLeft"
+    [class.expanded]="menuExpanded"
+  >
+    <button class="close-btn" (click)="toggleMenu()">
+      <img src="assets/icons/close.svg" alt="burger menu" />
+    </button>
+    <a routerLink="" class="nav-el" (click)="closeMenu()">Home</a>
+    <a routerLink="/order" class="nav-el" (click)="closeMenu()">Art-Styles</a>
+    <a class="nav-el" (click)="closeMenu()">Your Artworks</a>
+    <a class="nav-el" (click)="closeMenu()">About</a>
+  </div>
+  <button class="bag-btn">
+    <img src="assets/icons/bag.svg" alt="shopping bag" />
+    <div class="bag-items"><p>3</p></div>
+  </button>
+</nav>
