@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { artStyles } from 'src/app/data/art-styles';
 import { ArtStyle } from 'src/app/models/art-style.model';
 
 @Component({
@@ -10,17 +9,20 @@ import { ArtStyle } from 'src/app/models/art-style.model';
 })
 export class StyleSelectionFormComponent implements OnInit {
 
-  @Input() artStyle: ArtStyle = artStyles[0];
+  @Input() artStyle: ArtStyle;
   @Output() artStyleChange = new EventEmitter<ArtStyle>();
 
   modalVisible = false;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
+
+  
 
   order = new FormGroup({
-    artStyle: new FormControl(this.artStyle.name),
+    artStyle: new FormControl(),
     imageFile: new FormControl(''),
     canvasSize: new FormControl('8x10'),
     email: new FormControl(''),
@@ -44,6 +46,7 @@ export class StyleSelectionFormComponent implements OnInit {
     if(artStyle) {
       this.artStyle = artStyle
       this.artStyleChange.emit(artStyle)
+      this.order.controls['artStyle'].setValue(artStyle.name)
     } else {
       this.modalVisible = !this.modalVisible
     }

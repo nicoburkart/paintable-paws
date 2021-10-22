@@ -11,6 +11,11 @@ import { OrderPageComponent } from './modules/order/order-page/order-page.compon
 import { OrderModule } from './modules/order/order.module';
 import { SwiperModule } from 'swiper/angular';
 
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore/';
+
+import { environment } from 'src/environments/environment';
+
 @NgModule({
   declarations: [AppComponent, HomePageComponent, OrderPageComponent],
   imports: [
@@ -20,6 +25,8 @@ import { SwiperModule } from 'swiper/angular';
     HomeModule,
     OrderModule,
     SwiperModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent],

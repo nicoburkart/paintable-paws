@@ -1,11 +1,11 @@
 <div class="modal-overlay">
-  <div class="modal animate__animated animate__zoomIn animate__faster">
+  <div *ngIf="artStylesLoaded | async" class="modal animate__animated animate__zoomIn animate__faster">
     <h2 class="section-header">Choose style</h2>
     <button class="close-btn" (click)="closeModal()">
       <img src="assets/icons/close.svg" alt="burger menu" />
     </button>
     <div *ngFor="let style of artStyles" class="style" (click)="closeModal(style)">
-      <img [src]="style.previewImageUrl" [alt]="style.name">
+      <img [src]="'/assets/images/'+style.name+'-style.jpg'" [alt]="style.name">
       <h3 class="sub-section-header" [class.selected]="style.id == selectedId">{{style.name | titlecase}} Style</h3>
     </div>
   </div>

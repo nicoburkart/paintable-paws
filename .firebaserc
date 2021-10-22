@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "paintable-paws": {
+      "hosting": {
+        "paintable-paws": [
+          "paintable-paws"
+        ]
+      }
+    }
+  }
+}

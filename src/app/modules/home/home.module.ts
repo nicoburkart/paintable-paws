@@ -9,4 +9,5 @@ const declarations = [HeroComponent, HowItWorksComponent];
   imports: [],
   exports: declarations,
 })
+
 export class HomeModule {}

@@ -2,5 +2,10 @@
 export class ArtStyle {
     id: number;
     name: string;
-    previewImageUrl: string;
+
+    constructor (id, name) {
+        this.name = name;
+        this.id = id;
+    }
+
 }

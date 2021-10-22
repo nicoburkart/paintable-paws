@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { artStyles } from 'src/app/data/art-styles';
 import { ArtStyle } from 'src/app/models/art-style.model';
+import { ArtStyleService } from 'src/app/core/services/art-style.service';
 
 
 
@@ -11,14 +11,23 @@ import { ArtStyle } from 'src/app/models/art-style.model';
 })
 export class StyleSelectionModalComponent implements OnInit {
 
-  @Input() selectedId: number
+  @Input() selectedId: number;
   @Output() onCloseEvent = new EventEmitter<ArtStyle>()
 
-  artStyles: ArtStyle[] = artStyles;
+  artStyles: ArtStyle[] = []
+  artStylesLoaded: Promise<boolean>;
 
-  constructor() {}
+  constructor(private artStyleService: ArtStyleService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.setArtStyles()
+  }
+
+  async setArtStyles() {
+    this.artStyles = await this.artStyleService.getArtStyles();
+    this.artStylesLoaded = Promise.resolve(true);
+  }
+  
 
   closeModal(artStyle?: ArtStyle) {
     this.onCloseEvent.emit(artStyle)

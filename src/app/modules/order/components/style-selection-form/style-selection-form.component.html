@@ -1,7 +1,7 @@
 <form [formGroup]="order" class="form-view">
   <div class="form-section">
     <div class="selected-style">
-      <h2 class="section-header">{{artStyle.name | titlecase}} Style</h2>
+      <h2 class="section-header">{{artStyle?.name | titlecase}} Style</h2>
       <button class="style-selection-btn" (click)="openModal()">
         <img src="/assets/icons/arrow-down.svg" alt="arrow pointing down" />
       </button>
